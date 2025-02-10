@@ -6,6 +6,7 @@ The README.md you have is a guide for people who want to run your Spring Boot pr
 
  # 1. Build the Project:
    bash
+
    mvn clean package
 
 # What it does: 
@@ -14,17 +15,23 @@ The README.md you have is a guide for people who want to run your Spring Boot pr
 # Where to run it:
 
    Open a terminal.
+
    Navigate to your project root directory (demoCICD).
+
    Run the command inside your project folder.
+
    This will generate a .jar file in the target/ directory.
 
 # 2. Build the Docker Image:
 
 bash
+
 docker build -t demo-cicd:1.0 .
 
 # What it does: 
-This command tells Docker to create an image using the Dockerfile you created earlier. The -t demo-cicd:1.0 part tags the image with the name demo-cicd and version 1.0. The period . tells Docker to use the current directory as the build context (where the Dockerfile is located).
+This command tells Docker to create an image using the Dockerfile you created earlier. 
+The -t demo-cicd:1.0 part tags the image with the name demo-cicd and version 1.0. 
+The period . tells Docker to use the current directory as the build context (where the Dockerfile is located).
 
 # Where to run it:
 Before running this command, ensure that Docker is installed and running on your machine.
@@ -32,6 +39,7 @@ Run the command in the project root directory, where your Dockerfile is located.
 
 # 3. Run the Docker Container:
    bash
+
    docker run -p 8080:8080 demo-cicd:1.0
 
 # What it does:
